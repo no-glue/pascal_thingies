@@ -37,7 +37,7 @@ unit thingies;
         write('devops')
       else if (a mod 5) = 0 then
         write('ops')
-      else
+      else if (a mod 3) = 0 then
         write('dev');
     end;
     procedure merge(a,b,c:array of integer;n:integer);
