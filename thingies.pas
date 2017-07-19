@@ -3,7 +3,7 @@ unit thingies;
     function factorial(a:integer):integer;
     function isPrime(a:integer):integer;
     procedure message(a:integer);
-    procedure merge(a,b,c:array of integer;lo,hi:integer);
+    procedure merge(a,b,c:array of integer;n:integer);
   implementation
     function factorial(a:integer):integer;
     begin
