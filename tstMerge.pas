@@ -16,7 +16,7 @@ program tstMerge;
         write(IntToStr(a[i]),' ');
       end;
     writeln(' ');
-    sort(a,len);
+    sort(@a[0],len);
     for i:=0 to len-1 do
       begin
         write(IntToStr(a[i]),' ');
@@ -28,13 +28,13 @@ program tstMerge;
         write(IntToStr(b[i]),' ');
       end;
     writeln(' ');
-    sort(b,len);
+    sort(@b[0],len);
     for i:=0 to len-1 do
       begin
         write(IntToStr(b[i]),' ');
       end;
     writeln(' ');
-    merge(a,b,c,len);
+    merge(@a[0],@b[0],@c[0],len);
     for i:=0 to (2*len-1) do
       begin
         write(IntToStr(c[i]),' ');

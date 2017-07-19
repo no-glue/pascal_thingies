@@ -3,8 +3,8 @@ unit thingies;
     function factorial(a:integer):integer;
     function isPrime(a:integer):integer;
     procedure message(a:integer);
-    procedure merge(a,b,c:array of integer;n:integer);
-    procedure sort(a:array of integer;n:integer);
+    procedure merge(a,b,c:pinteger;n:integer);
+    procedure sort(a:pinteger;n:integer);
   implementation
     function factorial(a:integer):integer;
     begin
@@ -41,7 +41,7 @@ unit thingies;
       else if (a mod 3) = 0 then
         write('dev');
     end;
-    procedure merge(a,b,c:array of integer;n:integer);
+    procedure merge(a,b,c:pinteger;n:integer);
     var
       i,j,k: integer;
     begin
@@ -75,7 +75,7 @@ unit thingies;
           j:=j+1;
         end;
     end;
-    procedure sort(a:array of integer;n:integer);
+    procedure sort(a:pinteger;n:integer);
     var
       i,j,tmp,gap,updates:integer;
     begin
