@@ -22,7 +22,10 @@ unit thingies;
           while ((i*i)<=a) do
             begin
               if (a mod i) = 0 then
-                isPrime:=0;
+                begin
+                  isPrime:=0;
+                  exit;
+                end;
               i:=i+1;
             end;
           isPrime:=1;
