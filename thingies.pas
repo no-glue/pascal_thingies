@@ -4,6 +4,7 @@ unit thingies;
     function isPrime(a:integer):integer;
     procedure message(a:integer);
     procedure merge(a,b,c:array of integer;n:integer);
+    procedure sort(a:array of integer;n:integer);
   implementation
     function factorial(a:integer):integer;
     begin
@@ -72,6 +73,35 @@ unit thingies;
           c[k]:=b[j];
           k:=k+1;
           j:=j+1;
+        end;
+    end;
+    procedure sort(a:array of integer;n:integer);
+    var
+      i,j,tmp,gap,updates:integer;
+    begin
+      gap:=n-1;
+      updates:=1;
+      while updates=1 do
+        begin
+          if gap>1 then updates:=1
+          else
+            begin
+              updates:=0;
+              gap:=1;
+            end;
+          i:=0;
+          for j:=gap to n-1 do
+            begin
+              if a[i]>a[j] then
+                begin
+                  tmp:=a[i];
+                  a[i]:=a[j];
+                  a[j]:=tmp;
+                  updates:=1;
+                end;
+              i:=i+1;
+            end;
+          gap:=Trunc(gap/1.2);
         end;
     end;
 end.
