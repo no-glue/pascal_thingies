@@ -3,7 +3,7 @@ program tstFactorial;
   var
     a,r:integer;
   begin
-    a:=IntToStr(ParamStr(1));
+    a:=StrToInt(ParamStr(1));
     r:=factorial(a);
     write(IntToStr(r));
     writeln('');
